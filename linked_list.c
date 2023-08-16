@@ -23,7 +23,7 @@ struct Node *node_create(const char *str, int val) {
     int len = sizeof(str) + 1; 
     n->str = calloc(len + 1, sizeof(char)); 
     strcpy(n->str, str); 
-    assert(strcmp(n->str, str) == 0);
+    assert(strcmp(n->str, str) != 0);
     n->val = val; 
     n->next = n->prev = NULL; 
 
